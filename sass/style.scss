@@ -1,0 +1,321 @@
+@import "helpers/_normalize.scss";
+@import "core/variables";
+@import "core/extends";
+@import "core/mixsins";
+
+
+
+
+
+
+body {
+    @media screen and(max-width: 480px){
+        font-size: 10px;
+    }    
+    }
+
+form {
+    @include width(1200px, 100%){
+        font-family: 'Roboto', sans-serif;
+        height: 900px;
+        color: $textColor;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 3px;
+    }
+    h1 {
+        @media screen and (max-width:480px) {
+            width: 50%;
+            margin-left: 23%;
+        }
+        text-align: center;
+           color: #082662;
+            strong {
+                text-decoration: none;
+                color: $btnColor1;
+            }
+       }
+}
+
+.section1 {
+    @media screen and (max-width:480px){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    .row {
+        @media screen and (max-width:480px){
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-right: 10%; 
+        }
+        width: 40%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 5%;
+        .input {
+            @media screen and (max-width:480px){
+                height: 25px;
+            }
+            @extend %inputStyles;
+        
+        }
+    }
+    .row2 {
+        width: 40%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 5%;
+        .input {
+            @media screen and (max-width:480px){
+                height: 25px;
+            }
+           @extend %inputStyles;
+        }
+        select  {
+            @media screen and (max-width:480px){
+                height: 30px;
+            }
+            color: $textColor;
+            height: 45px;
+            width: auto;
+        }
+    }
+}
+
+.section2 {
+    @media screen and (max-width:480px){
+        max-width: 40%;
+        height: auto;
+        border-radius: 3px;
+        margin-left: 27%;
+       
+    }
+    
+    max-width: 90%;
+    height: 320px;
+    border: 1px solid $textColor;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EFF7FA;
+    .row {
+        @media screen and (max-width:480px){
+            width: 80%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        width: 40%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .input{
+            @media screen and (max-width:480px){
+                height: 25px;
+                margin-bottom: 20px;
+            }
+            @extend %inputStyles; 
+        }
+    }
+        .row2 {
+            @media screen and (max-width:480px){
+                width: 78%;
+                margin-left: auto;
+                margin-right: auto;
+                resize: none;
+                height: 10px;
+                padding-bottom: 7px;
+                padding-top: 7px;
+                &::placeholder{
+                    @media screen and (max-width:480px){
+                        padding-left: 10px;
+                    } 
+                }
+                
+            }
+            border: 1px solid $textColor;
+            width: 40%;
+            height: 85px;
+            display: flex;
+            resize: none;
+            border-radius: 3px;
+            padding-left: 1%;
+            padding-top: 1%;
+        
+        }
+
+         select  {
+            @media screen and (max-width:480px){
+                height: 28px;
+            }
+            color: $textColor;
+            height: 40px;
+            width: auto;
+        } 
+        h2 {
+            @media screen and (max-width:480px){
+                font-size: 12px;
+                padding-left: 18px;  
+            }
+            font-size: 18px;
+            padding-left: 5%;
+            padding-top: 1%;
+            color: #7690AF;
+        }
+        .url {
+            @media screen and (max-width:480px){
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+            }
+            width: 90%;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .texturl {
+            @media screen and (max-width:480px){
+                width: 82%;
+                margin-bottom: 20px;
+                height: 25px;
+                margin-left: auto;
+                margin-right: auto; 
+            }
+            border: 1px solid $textColor;
+            width: calc(80% + 3px);
+            border-radius: 3px;
+            padding-left: 10px;
+        }
+        .addurl {
+            @media screen and (max-width:480px){
+                 width: 90%;
+                 height: 25px;
+                 margin-left: auto;
+                 margin-right: auto;
+            }
+            width: calc(10% + 5px);
+            background-color: $btnColor1;
+            border-radius: 5px;
+            border-color: transparent;
+            color: white;
+            cursor: pointer;
+        }
+        .save {
+            @media screen and (max-width:480px){
+                width: 82%;
+                height: 25px;
+                margin-bottom: 10px;
+                margin-left: auto;
+                margin-right: auto; 
+            }
+            width: 25%;
+            height: 50px;
+            background-color: $btnColor1;
+            border-radius: 5px;
+            border-color: transparent;
+            color: white;
+            display: block;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+        
+        }
+        .rows {
+            @media screen and (max-width:480px){
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+            }
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            
+        }
+}
+ 
+.section3 {
+    @media screen and (max-width:480px){
+        max-width:40%;
+        height: auto;
+        margin-left: 27%;
+        margin-top: -5px;  
+    }
+    margin-top: 30px;
+    max-width: 90%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+        .row {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            line-height: 1.6;
+            margin: 0;
+        
+        }
+        .submit {
+            @media screen and (max-width:480px){
+                display: none;
+            }
+            width: 15%;
+            height: 50px;
+            background-color: $btnColor2;
+            border-radius: 25px;
+            border-color: transparent;
+            color: white;
+            cursor: pointer;
+        
+        }
+        a {
+            color: $btnColor1;
+        }
+        .btn2 {
+            @media screen and (max-width:480px){
+                width: 100%;
+                height: 25px;
+                background-color: #14C302;
+                border-radius: 25px;
+                border-color: transparent;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            display: none; 
+        }
+}
+
+
+
+
+
+
+
+  
